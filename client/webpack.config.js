@@ -22,17 +22,15 @@ module.exports = () => {
     },
     plugins: [
       //add HTMLWebpackPlugin
-      //add WebpackPwaManifest
+      //add MiniCssExtractPlugin
       //add InjectManifest
-      
+      //add WebpackPwaManifest
     ],
 
     module: {
       rules: [
-        // add mini-css-extract-plugin
         // add css-loader
         // add babel-loader
-        
       ],
     },
   };
