@@ -29,14 +29,15 @@ module.exports = () => {
         title: 'Webpack Plugin',
       }),
       //add MiniCssExtractPlugin
-      new miniCssExtractPlugin(),
+      // new miniCssExtractPlugin(),
       //add InjectManifest
       new InjectManifest({
-        swSrc: './src/sw.js',
+        swSrc: './src-sw.js',
         swDest: 'src-sw.js',
       }),
       //add WebpackPwaManifest
       new WebpackPwaManifest({
+        inject: true,
         name: 'Jate PWA',
         short_name: 'JPWA',
         description: 'A simple offline text editor PWA',
