@@ -21,7 +21,7 @@ export const putDb = async (content) => {
   // access desired object store
   const store = tx.objectStore('jate');
   // add content to object store
-  const request = store.put({ content, date: new Date().toISOString() }); 
+  const request = store.put({ id: 1, content }); 
   // log result
   console.log('Content added to database', content);
   // wait for transaction to complete
@@ -43,7 +43,7 @@ export const getDb = async () => {
   const result = await request;
   // log result
   console.log('Content retrieved from database', result);
-  return result;
+  return result?.content;
 };
 
 initdb();

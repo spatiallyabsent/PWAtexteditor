@@ -37,6 +37,7 @@ module.exports = () => {
       }),
       //add WebpackPwaManifest
       new WebpackPwaManifest({
+        fingerprints: false,
         inject: true,
         name: 'Jate PWA',
         short_name: 'JPWA',
